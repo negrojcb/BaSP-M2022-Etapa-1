@@ -1,0 +1,19 @@
+header {
+    display: inline-block;
+    width: 80%;
+    right: 20%;
+}
+header p {
+    display: inline-block;
+}
+header img {
+    display: inline-block;
+    width: 74px;
+    height: 98px;
+}
+aside {
+    display: inline-block;
+    width: 20%;
+    height: 1350px;
+    background-color: gray;
+}
