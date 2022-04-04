@@ -1,36 +1,175 @@
 header {
+    position: relative;
     display: inline-block;
     width: 80%;
-    right: 20%;
-}
+    height: 120px;
+    left: 20%;
+   }
 header p {
+    position: absolute;
     display: inline-block;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: center;
 }
 header img {
+    position: absolute;
     display: inline-block;
     width: 74px;
     height: 98px;
+    top: 16px;
+    right: 57px;
 }
 aside {
+    position: absolute;
     display: inline-block;
+    left: 0;
     width: 20%;
     height: 1350px;
-    background-color: gray;
+    background-color: #dcdada;
 }
-.history {
+.aside-form {
+    height: 120px;
+    width: 20%;
+}
+/*aca van los estilos del input y el menu*/
+section {
+    display: inline-block;
     position: relative;
-    background-color: aqua;
-    width: 100%;
-    height: 1000px;
+    left: 20%;
+    width: 80%;
+    height: auto;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+}
+.section-app-description {
+    display: inline-block;
+    position: relative;
+    left: 20%;
+    width: 80%;
+    height: 1230px;
+}
+h1 {
+    position: absolute;
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: roboto;
+}
+.section-app-description div {
+    position: relative;
+    display: inline-block;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    top: 95px;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
 
 }
-.history-container1 {
-    display: inline-block;
-    position: absolute;
-    width: 50%;
+h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 59px;
+    text-align: left;
+    font-family: Roboto;
 }
-history-container2 {
+.section-app-description p {
     display: inline-block;
-    position: absolute;
     width: 50%;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    font-family: Roboto;
+
+}
+.section-app-description img {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+.funtionalities-container li {
+    display: inline-block;
+    height: 57px;
+    width: 405px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 41px;
+    text-align: left;
+    font-family: Roboto;
+}
+.trackgenix-pros-container div {
+    display: inline-block;
+    width: 35%;
+    margin: 36px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 35px;
+    font-size: 30px;
+    text-align: justify;
+}
+h3 {
+    display: inline-block;
+    margin: 36px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-size: 35px;
+}
+/*estilos del form*/
+.history-container {
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    margin: 60px;
+}
+.history-container img {
+    height: 371px;
+    left: 0px;
+    top: 0px;
+    border-radius: 20px;
+    width: 584px;
+}
+.history-container p {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: Roboto;
+}
+.list-container {
+    display: inline-block;
+    width: 25%;
+    margin: 20px;
+}
+.lists p {
+    display: inline-block;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-size: 35px;
+}
+.list ol {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 200px;
+    line-height: normal;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: Roboto;
 }
