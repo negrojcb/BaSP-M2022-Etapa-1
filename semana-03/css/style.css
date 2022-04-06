@@ -11,16 +11,13 @@ p {
 }
 body {
     position: absolute;
-    
 }
 main {
     position: relative;
     margin-top: 150px;
     width: 80%;
     left: 20%;
-    
 }
-
 header {
     position: fixed;
     display: inline-block;
@@ -55,7 +52,7 @@ aside {
     position: absolute;
     display: inline-block;
     width: 20%;
-    background-color: #dcdada;
+    background-color: rgba(220, 218, 218, 1);
 }
 .aside-form {
     position: fixed;
@@ -93,7 +90,7 @@ aside {
     margin: 20px 20px 20px 20px;
     border-bottom: 2px solid rgba(170, 206, 155, 1);
     font-family: "roboto", arial;
-    color: black; 
+    color: rgb(0, 0, 0); 
     text-decoration: none;
     font-weight: 400;
     line-height: 47px;
@@ -121,7 +118,6 @@ aside {
     height: 65px;
     margin: 20px;
     border-bottom: 2px solid rgba(170, 206, 155, 1);
-    
 }
 .aside-info-img {
     position: relative;
@@ -134,9 +130,12 @@ aside {
 .aside-info-a {
     position: relative;
     display: inline-block;
+    padding: 8px;
+    left: 40px;
+    bottom: 20px;
     font-size: 18px;
     font-weight: 700;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 .aside-info-p {
     position: relative;
@@ -144,9 +143,9 @@ aside {
     padding: 25px;
     bottom: 52px;
     left: 25px;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 section {
     display: inline-block;
@@ -192,11 +191,10 @@ h2 {
     font-weight: 400;
     line-height: 64px;
     font-family: "roboto", arial;
-    
 }
 .section-app-description p {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 45%;
     margin-top: 20px;
     left: 93px;
@@ -208,8 +206,8 @@ h2 {
     color: rgba(149, 136, 136, 1);
 }
 .section-app-description img {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     left: 158px;
     width: 300px;
     height: 300px;
@@ -220,7 +218,7 @@ h2 {
     width: 270px;
     border: 1px solid rgba(55, 56, 103, 1);
     border-radius: 5px;
-    margin: 77px 0px 77px 180px;
+    margin: 50px 0px 50px 180px;
     padding: 15px;
     font-size: 20px;
     font-weight: 500;
@@ -248,32 +246,31 @@ h3 {
     font-size: 20px;
 }
 .form-container-div {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 40%;
     height: 200px;
     left: 210px;
     bottom: 55px;
 }
 .form-container-textarea {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 40%;
     height: 200px;
     left: 165px;
 }
 #name {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     border: 1px solid rgba(55, 56, 103, 1);
     border-radius: 4px;
     font-family: "roboto", arial;
     color: rgba(235, 235, 235, 0.5);
-    
 }
 #email {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     top: 20%;
     right: 160px;
     border: 1px solid rgba(55, 56, 103, 1);
@@ -282,20 +279,20 @@ h3 {
     color: rgba(235, 235, 235, 0.5);
 }
 .form-container-div span {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     top: 30px;
     font-family: "roboto", arial;
 }
 .checkbox-list {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     top: 90px;
     font-family: "roboto", arial;
 }
 .form-container-textarea label {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     bottom: 70px;
     left: 65px;
     font-family: "roboto", Arial;
@@ -377,7 +374,6 @@ footer {
     left: 15%;
     bottom: 0%;
     height: 250px;
-    
 }
 .footer-img-container {
     position: absolute;
