@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+}
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    font-family: "roboto", arial;
+    color: rgba(149, 136, 136, 1); 
+}
+body {
+    position: absolute;
+}
+main {
+    position: relative;
+    margin-top: 150px;
+    width: 80%;
+    left: 20%;
+}
+header {
+    position: fixed;
+    display: inline-block;
+    width: 80%;
+    height: 80px;
+    left: 20%;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.2);
+   }
+header p {
+    position: absolute;
+    display: inline-block;
+    margin-left: 42px;
+    margin-top: 20px;
+    font-family: "roboto", arial;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: center;
+    color: rgba(55, 56, 103, 1);
+}
+header img {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    top: 10px;
+    right: 50px;
+}
+aside {
+    position: absolute;
+    display: inline-block;
+    width: 20%;
+    background-color: rgba(220, 218, 218, 1);
+}
+.aside-form {
+    position: fixed;
+    z-index: 100;
+    width: 20%;
+    height: 80px;
+    background: rgba(235, 235, 235, 1);
+    box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.2);
+}    
+.aside-form input {
+    position: relative;
+    width: 80%;
+    top: 45px;
+    left: 5%;
+    background: rgba(235, 235, 235, 1);
+    border-radius: 5px;
+    border: 1px solid rgba(55, 56, 103, 1);
+}
+.aside-menu-container {
+    margin-top: 80px;
+}
+.aside-menu-container p {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 75px;
+    text-align: left;
+    padding: 20px ;
+    font-family: "roboto", arial;
+    color: rgb(0, 0, 0);
+    text-decoration: underline 3px rgba(170, 206, 155, 1);
+}
+.aside-list-a {
+    display: inline-block;
+    width: 80%;
+    margin: 20px 20px 20px 20px;
+    border-bottom: 2px solid rgba(170, 206, 155, 1);
+    font-family: "roboto", arial;
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 47px;
+    font-size: 25px;
+}
+.aside-info-title {
+    margin: 20px;
+    border-bottom: 2px solid rgba(170, 206, 155, 1);
+    font-family: "Roboto", arial;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+}
+.aside-info-text {
+    padding: 5px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    font-family: "roboto", arial;
+    color: rgba(149, 136, 136, 1);
+}
+.aside-info-container div {
+    height: 65px;
+    margin: 20px;
+    border-bottom: 2px solid rgba(170, 206, 155, 1);
+}
+.aside-info-img {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    top: 15px;
+}
+.aside-info-a {
+    position: relative;
+    display: inline-block;
+    padding: 8px;
+    left: 40px;
+    bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+.aside-info-p {
+    position: relative;
+    display: inline-block;
+    padding: 25px;
+    bottom: 52px;
+    left: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+section {
+    display: inline-block;
+    position: relative;
+    left: 5%;
+    width: 80%;
+    height: auto;
+    padding-top: 40px;
+    border-bottom: 3px solid rgba(170, 206, 155, 1);
+}
+.section-app-description {
+    height: 600px;
+    top: 130px;
+    padding: 0%;
+    margin-bottom: 130px;
+    border-top: 3px solid rgba(170, 206, 155, 1);
+}
+h1 {
+    position: relative;
+    display: inline-block;
+    top: -52px;
+    margin-left: 55px;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 59px;
+    text-align: left;
+    font-family: "roboto", arial;
+}
+.section-app-description div {
+    position: relative;
+    display: inline-block;
+    left: 5%;
+    top: 30px;
+    width: 75%;
+}
+.app-description-title {
+    left: 90px;
+}
+h2 {
+    position: relative;
+    left: 120px;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 64px;
+    font-family: "roboto", arial;
+}
+.section-app-description p {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin-top: 20px;
+    left: 93px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    font-family: "roboto", arial;
+    color: rgba(149, 136, 136, 1);
+}
+.section-app-description img {
+    position: relative;
+    display: inline-block;
+    left: 158px;
+    width: 300px;
+    height: 300px;
+}
+.funtionalities-container li {
+    display: inline-block;
+    height: 45px;
+    width: 270px;
+    border: 1px solid rgba(55, 56, 103, 1);
+    border-radius: 5px;
+    margin: 50px 0px 50px 180px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "roboto", arial;
+    color: rgba(55, 56, 103, 1);
+}
+.funtionalities-container img {
+    margin-right: 5px;
+}
+.pros-container-description  {
+    display: inline-block;
+    width: 35%;
+    margin: 0px 0px 50px 130px;
+    font-family: "roboto", arial;
+    font-weight: 400;
+    line-height: 35px;
+    font-size: 30px;
+    text-align: justify;
+}
+h3 {
+    display: inline-block;
+    font-family: "roboto", arial;
+    font-weight: 400;
+    line-height: 41px;
+    font-size: 20px;
+}
+.form-container-div {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 200px;
+    left: 210px;
+    bottom: 55px;
+}
+.form-container-textarea {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 200px;
+    left: 165px;
+}
+#name {
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(55, 56, 103, 1);
+    border-radius: 4px;
+    font-family: "roboto", arial;
+    color: rgba(235, 235, 235, 0.5);
+}
+#email {
+    position: relative;
+    display: inline-block;
+    top: 20%;
+    right: 160px;
+    border: 1px solid rgba(55, 56, 103, 1);
+    border-radius: 4px;
+    font-family: "roboto", arial;
+    color: rgba(235, 235, 235, 0.5);
+}
+.form-container-div span {
+    position: relative;
+    display: inline-block;
+    top: 30px;
+    font-family: "roboto", arial;
+}
+.checkbox-list {
+    position: relative;
+    display: inline-block;
+    top: 90px;
+    font-family: "roboto", arial;
+}
+.form-container-textarea label {
+    position: relative;
+    display: inline-block;
+    bottom: 70px;
+    left: 65px;
+    font-family: "roboto", Arial;
+    color: rgba(55, 56, 103, 1);
+}
+#message {
+    display: inline-block;
+    position: relative;
+    width: 255px;
+    height: 100px;
+    top: 35px;
+    border: 1px solid rgba(55, 56, 103, 1);
+    border-radius: 4px;
+    font-family: "roboto", arial;
+    color: rgba(235, 235, 235, 0.5);
+}
+.form-container-button {
+    display: inline-block;
+    position: relative;
+    margin: 50px;
+    top: 35px;
+    width: 70px;
+    font-family: "roboto", arial;
+    font-size: 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+.history-container {
+    display: inline-block;
+    position: relative;
+    width: 47%;
+    margin-left: 25px;
+}
+.left {
+    bottom: 40px;
+}
+.history-container img {
+    height: 200px;
+    width: 300px;
+    margin: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(55, 56, 103, 0.5)
+}
+.history-container p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    font-family: "roboto", arial;
+}
+.lists {
+    padding-left: 10%;
+}
+.list-container {
+    display: inline-block;
+    width: 25%;
+    margin: 10px 0px 30px 50px;
+}
+.lists p {
+    display: inline-block;
+    font-family: "roboto", arial;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    line-height: 41px;
+    font-size: 25px;
+}
+.lists ol {
+    margin-left: ;
+    font-size: 15px;
+    line-height: normal;
+    font-family: "roboto", arial;
+    list-style: upper;
+    color: rgba(149, 136, 136, 1);
+}
+footer {
+    display: inline-block;
+    position: relative;
+    width: 85%;
+    left: 15%;
+    bottom: 0%;
+    height: 250px;
+}
+.footer-img-container {
+    position: absolute;
+    left: 40%;
+    top: 20px;
+}
+.radium-rocket-logo {
+    display: inline-block;
+    position: relative;
+    left: 44%;
+    top: 70px;
+}
+.footer-info-container {
+   display: inline-block;
+   position: relative;
+   top: 115px;
+}
+ #city {
+    display: inline-block;
+    position: relative;
+    left: 80%;
+}
+#copyright {
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: 30%;
+}
