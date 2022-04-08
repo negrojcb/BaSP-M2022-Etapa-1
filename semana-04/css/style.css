@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 p {
@@ -401,4 +401,20 @@ footer {
     position: relative;
     top: 25px;
     left: 30%;
+} */
+* {
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+@media(max-width: 768px) {
+    .aside {
+        display: none;
+    }
+    header {
+        width: 100%;
+        left: 0%;
+    }
+    main {
+        width: 100%;
+        left: 0%;
+    }
 }
