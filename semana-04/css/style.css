@@ -405,11 +405,21 @@ footer {
 * {
     font-family: "roboto", Arial, Helvetica, sans-serif;
 }
+h2 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 64px;
+}
+
+
+
+/*@mediaquerys*/
 @media(max-width: 768px) {
     .aside {
         display: none;
     }
     header {
+        position: absolute;
         width: 100%;
         left: 0%;
     }

@@ -1,22 +1,23 @@
 header {
-    position: absolute;
+    position: fixed;
     display: flex;
+    z-index: 200;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     height: auto;
     left: 20%;
-    background-color: grey; 
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.2);
 }
-.header-title-container {
-    
-    padding-left: 15px;
+.header-container {
+    margin: 10px;
     font-size: 35px;
     font-weight: 700;
     line-height: 47px;
     text-align: center;
     color: rgba(55, 56, 103, 1);
 }
-.header-img-container {
-
+.header-container img {
+    width: 55px;
 }

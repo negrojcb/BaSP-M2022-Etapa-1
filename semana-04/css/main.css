@@ -3,5 +3,47 @@ main {
     top: 105px;
     width: 80%;
     left: 20%;
-    background-color: aqua;
+    /* background-color: aqua; */
+}
+h1 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 59px;
+    text-align: center;
+}
+.app-description-title {
+    width: 100%;
+    margin: 0 auto;
+}
+.first-section-container {
+    display: flex;
+    flex-flow: wrap;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgba(170, 206, 155, 1);
+
+}
+.app-description-title {
+    width: 80%;
+    border-top: 3px solid rgba(170, 206, 155, 1);
+    text-align: center;
+    
+}
+
+.clock-image-container {
+    margin: 20px auto;
+      
+}
+.text-container {
+    min-width: 256px;
+    max-width: 50%;
+    margin: 0 auto;
+    align-self: flex-end;
+}
+.clock-image-container img{
+    width: 200px;
+    margin: 0 0 0 28px;
+    flex-grow: 4;
 }
