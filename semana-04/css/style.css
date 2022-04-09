@@ -406,11 +406,19 @@ footer {
     font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 h2 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 64px;
 }
-
+.section-container {
+    display: flex;
+    flex-flow: wrap;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgba(170, 206, 155, 1);
+}
 
 
 /*@mediaquerys*/
@@ -426,5 +434,12 @@ h2 {
     main {
         width: 100%;
         left: 0%;
+    }
+    
+}
+
+@media(min-width: 1024px) {
+    .hamburger-container {
+        visibility: hidden;
     }
 }
