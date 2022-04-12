@@ -19,5 +19,8 @@ header {
     color: rgba(55, 56, 103, 1);
 }
 .header-container img {
-    width: 35px;
+    width: 30px;
+}
+.header-container p {
+    color: rgba(55, 56, 103, 1);
 }

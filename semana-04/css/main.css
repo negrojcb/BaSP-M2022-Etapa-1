@@ -1,9 +1,16 @@
 main {
-    position: absolute;
+    position: relative;
     top: 65px;
     width: 80%;
     left: 20%;
-    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger-container {
+    align-self: flex-start;
+    visibility: hidden;
 }
 .hamburger-container img {
     width: 35px;
@@ -13,40 +20,169 @@ h1 {
     font-weight: 400;
     line-height: 59px;
     text-align: center;
+    
+}
+#h1-container {
+    width: 100%;
+    border-bottom: 3px solid rgba(170, 206, 155, 1);
 }
 .app-description-title {
     width: 100%;
-    margin: 0 auto;
+    text-align: center;
 }
 .first-section-container {
     display: flex;
-    flex-flow: wrap;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    border-bottom: 3px solid rgba(170, 206, 155, 1);
-
-}
-.app-description-title {
-    width: 80%;
-    border-top: 3px solid rgba(170, 206, 155, 1);
-    text-align: center;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items:  center;
     
 }
-
-.clock-image-container {
-    margin: 20px auto;
-      
+.clock-image-container img{
+    width: 250px;
 }
-.text-container {
-    min-width: 256px;
-    max-width: 50%;
-    margin: 0 auto;
+.funtionalities-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 80%; 
+}
+.funtionalities-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.funtionalities-list p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35px;
+    width: 200px;
+    margin: 20px auto;
+    border: 1px solid rgba(55, 56, 103, 1);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(55, 56, 103, 1);
+}
+.funtionalities-list img {
+    margin: 0 5px;
+}
+.pros-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+.pros-container-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    max-width: 380px;
+}
+.pros-container-description div {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: justify;
+    color: rgba(149, 136, 136, 1);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+ .form-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    row-gap: 25px;*/
+}  
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    width: 100%;
+}
+.form-input-container input {
+    width: 95%;
+    height: 30px;
+    border: 2px solid rgba(55, 56, 103, 1);
+    border-radius: 4px;
+}
+.form-checkbox-container {
+    display: flex;
+    font-weight: 500;
+}
+.form-checkbox-container ul {
     align-self: flex-end;
 }
-.clock-image-container img{
-    width: 200px;
-    /* margin: 0 0 0 28px; */
-    flex-grow: 4;
+.form-container-textarea {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.form-container-textarea label {
+    font-weight: 500;
+    color: rgba(55, 56, 103, 1);
+}
+.form-container-textarea textarea {
+    height: 70px;
+    border: 2px solid rgba(149, 136, 136, 0.5);
+    border-radius: 4px;
+    color: rgba(149, 136, 136, 0.5);
+}
+.form-buttons-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.form-buttons-container input {
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.history-flex-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.history-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+}
+ .history-container img {
+    width: 95%;
+    border-radius: 10px;
+    border: 1px solid rgba(55, 56, 103, 0.5)
+} 
+
+.history-container p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 35px;
+    color: rgba(149, 136, 136, 1);
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 80%; 
+    margin-top: 25px;
+}
+/* .list-container p {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    line-height: 35px;
+    font-size: 20px;
+} */
+.list-container ol {
+    font-size: 15px;
+    line-height: normal;
+    list-style: upper;
+    color: rgba(149, 136, 136, 1);
 }
