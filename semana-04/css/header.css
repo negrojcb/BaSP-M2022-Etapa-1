@@ -20,6 +20,8 @@ header {
 }
 .header-container img {
     width: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 .header-container p {
     color: rgba(55, 56, 103, 1);

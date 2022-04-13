@@ -28,8 +28,6 @@ h3 {
     padding-bottom: 20px;
     border-bottom: 3px solid rgba(170, 206, 155, 1);
 }
-
-/*@mediaquerys*/
 @media(max-width: 1023px) {
     .aside {
         display: none;
@@ -46,7 +44,7 @@ h3 {
     .hamburger-container {
         visibility: visible;
     }
- }
+}
 @media(min-width: 1024px) {
     footer {
         width: 80%;
@@ -89,6 +87,5 @@ h3 {
     .h2-container, .app-description-title {
         align-self: flex-start;
         text-align: left;
-
      }
 }
