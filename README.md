@@ -23,6 +23,9 @@ The problem of this week is including the styles, using CSS, corresponding to th
 ## Week-04
 This week the ojetive is modifie the landing page, using Flexbox, to make it responsive.
 
+## Week-05
+The goal for this period is to learn the basics of Javascript. Also fix the mistakes of last week.
+
 ### Get this project
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
