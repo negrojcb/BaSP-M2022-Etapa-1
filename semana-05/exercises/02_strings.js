@@ -4,6 +4,7 @@ console.log('EXERCISE 2: STRINGS');
  y convertir todo el texto en mayúscula (utilizar toUpperCase).*/
 
  console.log('Exercise 2.a');
+
  var myName = 'Juan Cruz Bonelli';
  console.log('Result: ', myName.toUpperCase());
 
@@ -12,6 +13,7 @@ console.log('EXERCISE 2: STRINGS');
   el resultado en una nueva variable (utilizar substring).*/
 
  console.log('Exercise 2.b');
+
  var myPet = 'mi perro dinamita';
  var myPetStr = myPet.substring(0,5);
  console.log('Result: ', myPetStr);
@@ -21,6 +23,7 @@ console.log('EXERCISE 2: STRINGS');
    el resultado en una nueva variable (utilizar substring).*/
 
  console.log('Exercise 2.c');
+
  var myCity = 'San Nicolas de los Arroyos';
  var myCitySubS = myCity.substring(myCity.length - 3);
  console.log('Result: ', myCitySubS);
@@ -31,6 +34,7 @@ console.log('EXERCISE 2: STRINGS');
    (utilizar substring, toUpperCase, toLowerCase y el operador +).*/
 
  console.log('Exercise 2.d');
+
  var myCity = 'San Nicolas de los Arroyos';
  var myNewCity = myCity[0].toUpperCase() + myCity.substring(1).toLowerCase();
  console.log('Result: ', myNewCity);
@@ -41,6 +45,7 @@ console.log('EXERCISE 2: STRINGS');
    guardarla en una variable (utilizar indexOf).*/
 
  console.log('Exercise 2.e');
+
  var myCity = 'san nicolas de los arroyos';
  var myCityIndex = myCity.indexOf(' ');
  console.log('Result: ', myCityIndex);
@@ -52,6 +57,7 @@ console.log('EXERCISE 2: STRINGS');
     (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).*/
 
  console.log('Exercise 2.f');
+ 
  var myPc = 'hewllet packard';
  var myIndex = myPc.indexOf('p');
  var myNewPc = myPc[0].toUpperCase() +  myPc.substring(1, myIndex).toLowerCase()
