@@ -31,3 +31,6 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 
 ### Take a look to the Landing Page
 https://negrojcb.github.io/BaSP-M2022-Etapa-1/semana-04/
+
+### First steps with JavaScript
+https://negrojcb.github.io/BaSP-M2022-Etapa-1/semana-05/
