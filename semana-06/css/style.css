@@ -27,7 +27,7 @@ h3 {
     padding-bottom: 20px;
     border-bottom: 3px solid rgba(170, 206, 155, 1);
 }
-@media(min-width: 1023px) {
+@media(max-width: 1023px) {
     .aside {
         display: none;
     }
@@ -48,6 +48,10 @@ h3 {
     footer {
         width: 80%;
         left: 20%;
+    }
+    .login-container {
+        width: 80%;
+        left: 20%; 
     }
 }
 @media(min-width: 767px) {
@@ -90,4 +94,6 @@ h3 {
      h1 {
          text-align: left;
      }
+     
+    
 }
