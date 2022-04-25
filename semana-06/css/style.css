@@ -95,5 +95,11 @@ h3 {
          text-align: left;
      }
      
-    
+    .signup-form-container {
+        width: 450px;
+    } 
+    .signup-form {
+    flex-direction: row;
+    column-gap: 15px;
+    }
 }

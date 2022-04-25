@@ -5,23 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
-        <link rel="icon" type="image/x-icon" href="./assets/icons/LOGO-RR 4.png">
+        <link rel="icon" type="image/x-icon" href="../assets/icons/LOGO-RR 4.png">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;
         500&family=Inter:wght@300;500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/sidebar.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <!-- <link rel="stylesheet" href="./css/footer.css"> -->
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/sidebar.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <!-- <link rel="stylesheet" href="../css/footer.css"> -->
+        <link rel="stylesheet" href="../css/signup.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src=""></script>
     <body>
         <header>
             <div class="header-container">
                 <p>Trackgenix</p>
             </div>
             <div class="header-container">
-                <img src="./assets/icons/LOGO-RR 4.png" alt="radium rocket logo">
+                <img src="../assets/icons/LOGO-RR 4.png" alt="radium rocket logo">
             </div>
         </header>
         <aside class="aside">
@@ -47,31 +48,38 @@
                     t lorem feugiat tempus aliquam.
                 </p>
                 <div>
-                    <img class="aside-info-img" src="./assets/icons/envelope.png" alt="envelope">
+                    <img class="aside-info-img" src="../assets/icons/envelope.png" alt="envelope">
                     <a class="aside-info-a" href="#">information@untitled.tld</a>
                 </div> 
                 <div>
-                    <img class="aside-info-img" src="./assets/icons/house.png" alt="house">
+                    <img class="aside-info-img" src="../assets/icons/house.png" alt="house">
                     <p class="aside-info-p">1234 Somewhere Road #8254 Nashville, TN 00000-0000</p>
                 </div>                          
             </div>
         </aside>
         <section class="login-container">
             <div class="hamburger-container">
-                <img src="./assets/icons/ham.png" alt="logo-hamburger">
+                <img src="../assets/icons/ham.png" alt="logo-hamburger">
             </div>
-            <Div class="login-form-container">
-                <h2>Log In</h2>
-                <form class="login-form" action="">
-                    <input class="login-input" type="email" id="email" placeholder="Email" >
-                    <input class="login-input" type="password" id="password" placeholder="Password">
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="rememberme">
-                        <label class="login-label" for="rememberme">Remember me</label>
-                    </div>
-                    <input type="submit" value="Continue" id="button">
-                    <a href="#" id="recover">Forgot password?</a>
-                    <p>Don´t have an account?<a href="#">Sign up now</a></p>
+            <Div class="signup-form-container">
+                <h2>Signup</h2>
+                <form class="signup-form" action="" id="signup-form">
+                        <div class="signup-inputs-container">
+                            <input type="text" placeholder="firstname">
+                            <input type="text" placeholder="lastname">
+                            <input type="text" placeholder="ID number">
+                            <input type="date" >
+                            <input type="number" placeholder="Phone number">
+                            <input type="text" placeholder="Adress">
+                        </div>
+                        <div class="signup-inputs-container">
+                            <input type="text" placeholder="City">
+                            <input type="number" placeholder="Zipnumber">
+                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="Password">
+                            <input type="text" placeholder="Repeat password">
+                            <input type="submit" value="submit" id="button">
+                        </div>
                 </form>
             </Div>
         </section>
