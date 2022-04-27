@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/sidebar.css">
         <link rel="stylesheet" href="../css/main.css">
-        <!-- <link rel="stylesheet" href="../css/footer.css"> -->
         <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="..//css/modal.css">
         <script src="../javascript/login.js"></script>
     <body>
         <header>
@@ -64,17 +64,24 @@
             <Div class="login-form-container">
                 <h2>Log In</h2>
                 <form class="login-form" action="" id="login-form">
-                    <input class="login-input" type="email" id="email" placeholder="Email" >
-                    <input class="login-input" type="password" id="password" placeholder="Password">
+                    <input class="login-input" type="email" id="email" placeholder="Email" name="email" >
+                    <label class="show-error" for="email" id="elabel"></label>
+                    <input class="login-input" type="password" id="password" placeholder="Password" name="password">
+                    <label class="show-error" for="password" id="passlabel" ></label>
                     <div class="checkbox-container">
                         <input type="checkbox" id="rememberme">
-                        <label class="login-label" for="rememberme">Remember me</label>
+                        <label class="checkbox-label" for="rememberme">Remember me</label>
                     </div>
                     <input type="submit" value="Login" id="button">
                     <a href="#" id="recover">Forgot password?</a>
-                    <p>Don´t have an account?<a href="./signup.html">Sign up now</a></p>
+                    <p>Don´t have an account?<a href="./signup.html"> Sign up now</a></p>
                 </form>
             </Div>
+            <div id="myModal" class="modal">
+                <div id="boxModal" class="modal-content">
+                  <span id="button-close" class="close">&times;</span>
+                </div>
+            </div>
         </section>
     </body>
 </html>
