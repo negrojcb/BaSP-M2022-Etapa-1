@@ -29,7 +29,9 @@ The goal for this period is to learn the basics of Javascript. Also fix the mist
 ## **Week-06**
 This week the team should develope the ***"login form"*** and the ***"employee sing-up"*** taking into account the layout and the styles from week-04. Also must add functionalities to both forms using JavaScript.
 
-Here the link to see the work done during this week .
+**Here the link to see the work done during this week**
+
+ https://negrojcb.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
 
 
 
