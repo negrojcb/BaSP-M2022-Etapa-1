@@ -1,0 +1,16 @@
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 140px;
+    top: 80px;
+}
+footer img {
+    width: 35px;
+}
+footer p {
+    text-align: center;
+    font-size: 10px;
+}
