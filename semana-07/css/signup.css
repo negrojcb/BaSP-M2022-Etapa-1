@@ -8,7 +8,6 @@ h2 {
 .login-container {
     position: relative;
     top: 65px;
-    padding-top: 20px;
 }
 .signup-form-container {
     display: flex;

@@ -161,7 +161,6 @@ window.onload = function () {
     if (!response.succsess) {
       alert(response.msg);
       console.log(response);
-      localStorage.setItem("email", email.value);
     } else {
       alert(response.msg);
       console.log(response);

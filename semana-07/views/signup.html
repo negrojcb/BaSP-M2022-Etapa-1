@@ -61,7 +61,7 @@
             <div class="hamburger-container">
                 <img src="../assets/icons/ham.png" alt="logo-hamburger">
             </div>
-            <Div class="signup-form-container">
+            <div class="signup-form-container">
                 <h2>Signup</h2>
                 <form class="signup-form"  id="signup-form">
                         <div id="first-div" class="signup-inputs-container">
@@ -71,10 +71,10 @@
                             <input type="text" placeholder="Lastname" name="lastname" id="lastname">
                             <label for="lastname"></label>
                             <p id="lastNameMsg"></p>
-                            <input type="text" placeholder="ID number" name="idnumber" id="dni">
+                            <input type="number" placeholder="ID number" name="idnumber" id="dni">
                             <label for="dni"></label>
                             <p id="dniMsg"></p>
-                            <input type="date" id="birthdate" name="birthdate">
+                            <input type="text" id="birthdate" name="birthdate" placeholder="birthday">
                             <label for="birthdateMsg"></label>
                             <p id="birthdateMsg"></p>
                             <input type="number" placeholder="Phone number" name="phone" id="phonenumber">
@@ -100,16 +100,26 @@
                             <input type="password" placeholder="Repeat password" name="repeatpassword" id="repeatpass">
                             <label for="repeatpass"></label>
                             <p id="repeatpasswordMsg"></p>
-                            <input type="submit" value="Create" id="button" name="create">
+                            <button type="submit" id="button" name="create">Create</button>
                             <label for="button"></label>
                         </div>
                 </form>
-            </Div>
+            </div>
             <div id="myModal" class="modal">
                 <div id="boxModal" class="modal-content">
-                    <p id="msgEmail"></p>
-                    <p id="msgPass"></p>
-                    <button id="button-close" class="close" >&times;</button>
+                    <p id="alert-name"></p>
+                    <p id="alert-lastname"></p>
+                    <p id="alert-dni"></p>
+                    <p id="alert-birthdate"></p>
+                    <p id="alert-phone"></p>
+                    <p id="alert-adress"></p>
+                    <p id="alert-city"></p>
+                    <p id="alert-zip"></p>
+                    <p id="alert-email"></p>
+                    <p id="alert-pass"></p>
+                    <p id="alert-repass"></p>
+                    <button id="button-back">Back</button>
+                    <button id="button-close" class="close" >OK</button>
                 </div>
             </div>
         </section>

@@ -1,6 +1,4 @@
 window.onload = function () {
-  //Declaracion de variables//
-
   var signUpInputs = document.querySelectorAll(".signup-inputs-container > input");
   var name = document.getElementById("firstname");
   var surname = document.getElementById("lastname");
@@ -16,7 +14,8 @@ window.onload = function () {
   var createButton = document.getElementById("button");
   var modal = document.getElementById("myModal");
   var signUpDataBox = document.getElementById("boxModal");
-  var btnClose = document.getElementById("button-close");
+  var btnSend = document.getElementById("button-close");
+  var btnClose = document.getElementById("button-back");
   var firstnameMsg = document.getElementById("firstnameMsg");
   var lastNameMsg = document.getElementById("lastNameMsg");
   var dniMsg = document.getElementById("dniMsg");
@@ -28,7 +27,6 @@ window.onload = function () {
   var emailMsg = document.getElementById("emailMsg");
   var passwordMsg = document.getElementById("passwordMsg");
   var repeatpasswordMsg = document.getElementById("repeatpasswordMsg");
-  /* validations */
 
   var letters = [
     "a",
@@ -139,9 +137,9 @@ window.onload = function () {
     return numericChar;
   }
 
-  function inputNameData(input) {
+  function inputNameData() {
     var pName = document.createElement("p");
-    if (lettersNumbers(input) > 3) {
+    if (lettersNumbers(name.value) > 3) {
       pName.innerText = "Name: " + input;
       return pName;
     } else {
@@ -205,7 +203,6 @@ window.onload = function () {
     for (var i = 0; i < input.length; i++) {
       if (checkNumbers(input[i])) {
         if (input[i - 1] == " " && checkNumbers(input.substring(i + 1))) {
-          console.log(input[i - 1]);
           return true;
         }
       }
@@ -498,13 +495,10 @@ window.onload = function () {
       case "firstname":
         firstnameMsg.innerHTML = "";
         e.target.style.border = "none";
-        e.target.value = "";
-
         break;
       case "lastname":
         lastNameMsg.innerHTML = "";
         e.target.style.border = "none";
-        e.target.value = "";
         break;
       case "idnumber":
         dniMsg.innerHTML = "";
@@ -514,7 +508,7 @@ window.onload = function () {
         birthdateMsg.innerHTML = "";
         e.target.style.border = "none";
         break;
-      case "phonenumber":
+      case "phone":
         phonenumberMsg.innerHTML = "";
         e.target.style.border = "none";
         break;
@@ -550,30 +544,42 @@ window.onload = function () {
     input.addEventListener("focus", correctError);
   });
 
-  var nameData = inputNameData(name.value);
-  var surnameData = surnameInputData(surname.value);
-  var idData = idInputData(idNumber.value);
-  var birthData = birthInputData(birth.value);
-  var phoneData = phoneInputData(phone.value);
-  var adressData = adressInputData(adress.value);
-  var cityData = cityInputData(city.value);
-  var zipData = zipInputData(zip.value);
-  var emailData = emailInputData(email.value);
-  var passwordData = passwordInputData(password.value);
-  var rePasswordData = rePasswordInputData(rePassword.value);
+  // var nameData = inputNameData();
+  // var surnameData = surnameInputData(surname.value);
+  // var idData = idInputData(idNumber.value);
+  // var birthData = birthInputData(birth.value);
+  // var phoneData = phoneInputData(phone.value);
+  // var adressData = adressInputData(adress.value);
+  // var cityData = cityInputData(city.value);
+  // var zipData = zipInputData(zip.value);
+  // var emailData = emailInputData(email.value);
+  // var passwordData = passwordInputData(password.value);
+  // var rePasswordData = rePasswordInputData(rePassword.value);
 
   function signUpnData() {
-    signUpDataBox.appendChild(nameData);
-    signUpDataBox.appendChild(surnameData);
-    signUpDataBox.appendChild(idData);
-    signUpDataBox.appendChild(birthData);
-    signUpDataBox.appendChild(phoneData);
-    signUpDataBox.appendChild(adressData);
-    signUpDataBox.appendChild(cityData);
-    signUpDataBox.appendChild(zipData);
-    signUpDataBox.appendChild(emailData);
-    signUpDataBox.appendChild(passwordData);
-    signUpDataBox.appendChild(rePasswordData);
+    document.getElementById("alert-name").innerHTML = name.value;
+    document.getElementById("alert-lastname").innerHTML = surname.value;
+    document.getElementById("alert-dni").innerHTML = idNumber.value;
+    document.getElementById("alert-birthdate").innerHTML = birth.value;
+    document.getElementById("alert-phone").innerHTML = phone.value;
+    document.getElementById("alert-adress").innerHTML = adress.value;
+    document.getElementById("alert-city").innerHTML = city.value;
+    document.getElementById("alert-zip").innerHTML = zip.value;
+    document.getElementById("alert-email").innerHTML = email.value;
+    document.getElementById("alert-pass").innerHTML = password.value;
+    document.getElementById("alert-repass").innerHTML = rePassword.value;
+    //signUpDataBox.appendChild(nameData);
+
+    // signUpDataBox.appendChild(surnameData);
+    // signUpDataBox.appendChild(idData);
+    // signUpDataBox.appendChild(birthData);
+    // signUpDataBox.appendChild(phoneData);
+    // signUpDataBox.appendChild(adressData);
+    // signUpDataBox.appendChild(cityData);
+    // signUpDataBox.appendChild(zipData);
+    // signUpDataBox.appendChild(emailData);
+    // signUpDataBox.appendChild(passwordData);
+    // signUpDataBox.appendChild(rePasswordData);
     modal.classList.add("modalVisible");
     return false;
   }
@@ -585,16 +591,34 @@ window.onload = function () {
 
   btnClose.addEventListener("click", function (e) {
     modal.classList.remove("modalVisible");
-    signUpDataBox.removeChild(nameData);
-    signUpDataBox.removeChild(surnameData);
-    signUpDataBox.removeChild(idData);
-    signUpDataBox.removeChild(birthData);
-    signUpDataBox.removeChild(phoneData);
-    signUpDataBox.removeChild(adressData);
-    signUpDataBox.removeChild(cityData);
-    signUpDataBox.removeChild(zipData);
-    signUpDataBox.removeChild(emailData);
-    signUpDataBox.removeChild(passwordData);
-    signUpDataBox.removeChild(rePasswordData);
+    signUpInputs.forEach((input) => {
+      input.value = "";
+      input.style.border = "none";
+      input.style.borderBottom = "1px solid black";
+    });
+  });
+
+  //fecth
+  const fetching = async () => {
+    const request = await fetch(
+      `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name.value}&lastName=${surname.value}&dni=${idNumber.value}&dob=${birth.value}&phone=${phone.value}&address=${adress.value}&city=${city.value}&zip=${zip.value}&email=${email.value}&password=${password.value}`
+    );
+    const response = await request.json();
+    if (!response.succsess) {
+      alert(response.msg);
+      console.log(response);
+      localStorage.setItem("email", email.value);
+    } else {
+      alert(response.error.msg);
+      console.log(response);
+    }
+  };
+
+  btnSend.addEventListener("click", fetching);
+  btnSend.addEventListener("click", function (e) {
+    modal.classList.remove("modalVisible");
   });
 };
+// ame=" + name.value + "&lastName=" + surname.value + "&dni=" + idNumber.value +
+//             "&dob=" + newDate + "&phone=" + phone.value + "&address=" + adress.value + "&city=" + city.value +
+//             "&zip=" + zip.value + "&email=" + email.value + "&password=" + password.value
