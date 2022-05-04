@@ -36,6 +36,8 @@ This week the team should develope the ***"login form"*** and the ***"employee s
 ## **Week-07**
 This time the team must add a ***request HTTP*** from Login and Signup forms created last week. Additionally we have to manipulate the Storage in order to save some info entered in the form´s fields.
 
+**Check it out here** https://negrojcb.github.io/BaSP-M2022-Etapa-1/semana-07/views/index.html
+
 
 
 
