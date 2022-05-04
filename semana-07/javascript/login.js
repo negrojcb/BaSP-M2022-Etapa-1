@@ -153,19 +153,25 @@ window.onload = function () {
   }
 
   //fecth
-  const fetching = async () => {
-    const request = await fetch(
-      `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${password.value}`
-    );
-    const response = await request.json();
-    if (!response.succsess) {
-      alert(response.msg);
-      console.log(response);
-    } else {
-      alert(response.msg);
-      console.log(response);
+  function fetching() {
+    if (validateEmail(email.value) && validatePassword(password.value)) {
+      fetch(
+        "https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + email.value + "&password=" + password.value
+      )
+        .then(function (response) {
+          console.log(response);
+          return response.json();
+        })
+        .then(function (jsonResponse) {
+          console.log(jsonResponse);
+          alert("Result: " + jsonResponse.msg);
+        })
+        .catch(function (response) {
+          alert("Resultado: " + response.msg);
+          console.log(response.msg);
+        });
     }
-  };
+  }
 
   logInButton.addEventListener("click", function (e) {
     e.preventDefault();

@@ -37,7 +37,7 @@ h2 {
 #first-div {
     padding-top: 22px;
 }
-.signup-inputs-container input {
+.input-standar {
     width: 150px;
     background-color: rgba(55, 56, 103, 0.0);
     border: none;
@@ -62,4 +62,15 @@ h2 {
     color: white;
     border: none;
     box-shadow: 0 3px 5px 1px rgba(55, 56, 103, 0.4);
+}
+/*Estilos de error*/
+.error-style {
+    color: red;
+}
+.input-error{
+    border: 2px solid red;
+}
+/*estilos ok*/
+.input-rigth{
+    border: 2px solid rgba(170, 206, 155, 1);
 }

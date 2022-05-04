@@ -137,65 +137,11 @@ window.onload = function () {
     return numericChar;
   }
 
-  function inputNameData() {
-    var pName = document.createElement("p");
-    if (lettersNumbers(name.value) > 3) {
-      pName.innerText = "Name: " + input;
-      return pName;
-    } else {
-      pName.innerText = "Enter a valid Name please";
-      return pName;
-    }
-  }
-
-  function surnameInputData(input) {
-    var pSurname = document.createElement("p");
-    if (lettersNumbers(input) > 3) {
-      pSurname.innerText = "Lastname: " + input;
-      return pSurname;
-    } else {
-      pSurname.innerText = "Enter a valid Lastame please";
-      return pSurname;
-    }
-  }
-
-  function idInputData(input) {
-    var pIdNumber = document.createElement("p");
-    if (checkNumbers(input) > 7) {
-      pIdNumber.innerText = "ID number " + input;
-      return pIdNumber;
-    } else {
-      pIdNumber.innerText = "Enter a valid ID number please";
-      return pIdNumber;
-    }
-  }
-
   function validateBirhtDate(input) {
     if (checkNumbers(input) !== 0) {
       return true;
     } else {
       return false;
-    }
-  }
-
-  function birthInputData(input) {
-    var pBirth = document.createElement("p");
-    if (checkNumbers(input) !== 0) {
-      pBirth.innerHTML = "Birth date: " + input;
-      return pBirth;
-    } else {
-      pBirth.innerHTML = "Enter a birth date please";
-      return pBirth;
-    }
-  }
-  function phoneInputData(input) {
-    var pPhone = document.createElement("p");
-    if (checkNumbers(input) === 10) {
-      pPhone.innerHTML = "Phone number: " + input;
-      return pPhone;
-    } else {
-      pPhone.innerHTML = "Enter a valid phone number please";
-      return pPhone;
     }
   }
 
@@ -233,17 +179,6 @@ window.onload = function () {
     }
   }
 
-  function adressInputData(input) {
-    var pAdress = document.createElement("p");
-    if (validateAdress(input) === true) {
-      pAdress.innerHTML = "Adress: " + input;
-      return pAdress;
-    } else {
-      pAdress.innerHTML = "Enter a valid adress please";
-      return pAdress;
-    }
-  }
-
   function validateCity(input) {
     var inputValue = input;
     var numberOfLetters = 0;
@@ -267,33 +202,11 @@ window.onload = function () {
     }
   }
 
-  function cityInputData(input) {
-    var pCity = document.createElement("p");
-    if (validateCity(input) === true) {
-      pCity.innerHTML = "City: " + input;
-      return pCity;
-    } else {
-      pCity.innerHTML = "Enter a valid city please";
-      return pCity;
-    }
-  }
-
   function validateZip(input) {
     if (checkNumbers(input) >= 4 && checkNumbers(input) <= 5) {
       return true;
     } else {
       return false;
-    }
-  }
-
-  function zipInputData(input) {
-    var pZip = document.createElement("p");
-    if (validateZip(input) === true) {
-      pZip.innerHTML = "Zip: " + input;
-      return pZip;
-    } else {
-      pZip.innerHTML = "Enter a valid Zip code please";
-      return pZip;
     }
   }
 
@@ -303,17 +216,6 @@ window.onload = function () {
       return true;
     } else {
       return false;
-    }
-  }
-
-  function emailInputData(input) {
-    var pEmail = document.createElement("p");
-    if (validateEmail(input) === true) {
-      pEmail.innerHTML = "Email: " + input;
-      return pEmail;
-    } else {
-      pEmail.innerHTML = "Enter a valid Email please";
-      return pEmail;
     }
   }
 
@@ -341,17 +243,6 @@ window.onload = function () {
     }
   }
 
-  function passwordInputData(input) {
-    var pPassword = document.createElement("p");
-    if (validatePassword(input) === true) {
-      pPassword.innerHTML = "Password: " + input;
-      return pPassword;
-    } else {
-      pPassword.innerHTML = "Enter a valid password please";
-      return pPassword;
-    }
-  }
-
   function validateRePassword(input) {
     var inputValue = input;
     var numberOfLetters = 0;
@@ -376,116 +267,105 @@ window.onload = function () {
     return false;
   }
 
-  function rePasswordInputData(input) {
-    var pRePassword = document.createElement("p");
-    if (validateRePassword(input) === true) {
-      pRePassword.innerHTML = "Password: " + input;
-      return pRePassword;
-    } else {
-      pRePassword.innerHTML = "Repeat the password please";
-      return pRePassword;
-    }
-  }
-
   function validateForm(e) {
     switch (e.target.name) {
       case "firstname":
         if (lettersNumbers(e.target.value) < 3) {
           firstnameMsg.innerHTML = "Name must have at least 3 letters";
           firstnameMsg.style.color = "red";
-          name.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "lastname":
         if (lettersNumbers(e.target.value) < 3) {
           lastNameMsg.innerHTML = "Name must have at least 3 letters";
           lastNameMsg.style.color = "red";
-          surname.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "idnumber":
         if (checkNumbers(e.target.value) < 7) {
           dniMsg.innerHTML = "Name must have at least 7 numbers";
           dniMsg.style.color = "red";
-          idNumber.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "birthdate":
         if (!validateBirhtDate(e.target.value)) {
           birthdateMsg.innerHTML = "Please enter a valid date";
           birthdateMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "phone":
         if (checkNumbers(e.target.value) !== 10) {
           phonenumberMsg.innerHTML = "Phone must have 10 numbers";
           phonenumberMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "adress":
         if (!validateAdress(e.target.value)) {
           adressMsg.innerHTML = "Name must have at least 3 letters";
           adressMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "city":
         if (!validateCity(e.target.value)) {
           cityMsg.innerHTML = "City must have at least 3 letters";
           cityMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "zipcode":
         if (!validateZip(e.target.value)) {
           zipcodeMsg.innerHTML = "Zip Code must have min 4 numbers and max 5 numbers";
           zipcodeMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "email":
         if (!validateEmail(e.target.value)) {
           emailMsg.innerHTML = "enter a valid email";
           emailMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "password":
         if (!validatePassword(e.target.value)) {
           passwordMsg.innerHTML = "Password must have at least 8 alphanumeric characters";
           passwordMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
         break;
       case "repeatpassword":
         if (!validateRePassword(e.target.value)) {
           repeatpasswordMsg.innerHTML = "Password must be the same in both fields";
           repeatpasswordMsg.style.color = "red";
-          e.target.style.border = "2px solid red";
+          e.target.classList.add("input-error");
         } else {
-          e.target.style.border = "2px solid rgba(170, 206, 155, 1)";
+          e.target.classList.add("input-rigth");
         }
     }
   }
@@ -494,47 +374,36 @@ window.onload = function () {
     switch (e.target.name) {
       case "firstname":
         firstnameMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "lastname":
         lastNameMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "idnumber":
         dniMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "birthdate":
         birthdateMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "phone":
         phonenumberMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "adress":
         adressMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "city":
         cityMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "zipcode":
         zipcodeMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "email":
         emailMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "password":
         passwordMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
       case "repeatpassword":
         repeatpasswordMsg.innerHTML = "";
-        e.target.style.border = "none";
         break;
     }
   }
@@ -543,18 +412,6 @@ window.onload = function () {
     input.addEventListener("blur", validateForm);
     input.addEventListener("focus", correctError);
   });
-
-  // var nameData = inputNameData();
-  // var surnameData = surnameInputData(surname.value);
-  // var idData = idInputData(idNumber.value);
-  // var birthData = birthInputData(birth.value);
-  // var phoneData = phoneInputData(phone.value);
-  // var adressData = adressInputData(adress.value);
-  // var cityData = cityInputData(city.value);
-  // var zipData = zipInputData(zip.value);
-  // var emailData = emailInputData(email.value);
-  // var passwordData = passwordInputData(password.value);
-  // var rePasswordData = rePasswordInputData(rePassword.value);
 
   function signUpnData() {
     document.getElementById("alert-name").innerHTML = name.value;
@@ -568,18 +425,6 @@ window.onload = function () {
     document.getElementById("alert-email").innerHTML = email.value;
     document.getElementById("alert-pass").innerHTML = password.value;
     document.getElementById("alert-repass").innerHTML = rePassword.value;
-    //signUpDataBox.appendChild(nameData);
-
-    // signUpDataBox.appendChild(surnameData);
-    // signUpDataBox.appendChild(idData);
-    // signUpDataBox.appendChild(birthData);
-    // signUpDataBox.appendChild(phoneData);
-    // signUpDataBox.appendChild(adressData);
-    // signUpDataBox.appendChild(cityData);
-    // signUpDataBox.appendChild(zipData);
-    // signUpDataBox.appendChild(emailData);
-    // signUpDataBox.appendChild(passwordData);
-    // signUpDataBox.appendChild(rePasswordData);
     modal.classList.add("modalVisible");
     return false;
   }
@@ -599,26 +444,76 @@ window.onload = function () {
   });
 
   //fecth
-  const fetching = async () => {
-    const request = await fetch(
-      `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name.value}&lastName=${surname.value}&dni=${idNumber.value}&dob=${birth.value}&phone=${phone.value}&address=${adress.value}&city=${city.value}&zip=${zip.value}&email=${email.value}&password=${password.value}`
-    );
-    const response = await request.json();
-    if (!response.succsess) {
-      alert(response.msg);
-      console.log(response);
-      localStorage.setItem("email", email.value);
-    } else {
-      alert(response.error.msg);
-      console.log(response);
-    }
-  };
+  function fetching() {
+    fetch(
+      "https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" +
+        name.value +
+        "&lastName=" +
+        surname.value +
+        "&dni=" +
+        idNumber.value +
+        "&dob=" +
+        birth.value +
+        "&phone=" +
+        phone.value +
+        "&address=" +
+        adress.value +
+        "&city=" +
+        city.value +
+        "&zip=" +
+        zip.value +
+        "&email=" +
+        email.value +
+        "&password=" +
+        password.value
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (jsonResponse) {
+        alert(jsonResponse.msg);
+        localStorage.setItem("Name", jsonResponse.data.name);
+        localStorage.setItem("Lastname", jsonResponse.data.lastName);
+        localStorage.setItem("Idnumber", jsonResponse.data.dni);
+        localStorage.setItem("DoB", jsonResponse.data.dob);
+        localStorage.setItem("Phone", jsonResponse.data.phone);
+        localStorage.setItem("Address", jsonResponse.data.address);
+        localStorage.setItem("City", jsonResponse.data.city);
+        localStorage.setItem("Zip", jsonResponse.data.zip);
+        localStorage.setItem("Email", jsonResponse.data.email);
+        localStorage.setItem("Password", jsonResponse.data.password);
+      })
+      .catch(function (jsonResponse) {
+        alert(jsonResponse.msg);
+      });
+  }
 
   btnSend.addEventListener("click", fetching);
   btnSend.addEventListener("click", function (e) {
     modal.classList.remove("modalVisible");
   });
+  btnSend.addEventListener("click", function (e) {
+    signUpInputs.forEach((input) => {
+      input.value = "";
+      input.style.border = "none";
+      input.style.borderBottom = "1px solid black";
+    });
+  });
+
+  function recharge() {
+    if (typeof Storage !== "undefined") {
+      name.value = localStorage.getItem("Name");
+      surname.value = localStorage.getItem("Lastname");
+      idNumber.value = localStorage.getItem("Idnumber");
+      birth.value = localStorage.getItem("DoB");
+      phone.value = localStorage.getItem("Phone");
+      adress.value = localStorage.getItem("Address");
+      city.value = localStorage.getItem("City");
+      zip.value = localStorage.getItem("Zip");
+      email.value = localStorage.getItem("Email");
+      password.value = localStorage.getItem("Password");
+      rePassword.value = localStorage.getItem("Password");
+    }
+  }
+  recharge();
 };
-// ame=" + name.value + "&lastName=" + surname.value + "&dni=" + idNumber.value +
-//             "&dob=" + newDate + "&phone=" + phone.value + "&address=" + adress.value + "&city=" + city.value +
-//             "&zip=" + zip.value + "&email=" + email.value + "&password=" + password.value
