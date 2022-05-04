@@ -18,7 +18,7 @@ header {
     text-align: center;
     color: rgba(55, 56, 103, 1);
 }
-.header-container img {
+header img {
     width: 30px;
     margin-top: 20px;
     margin-right: 20px;
